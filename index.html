@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Gestion des membres</title>
+</head>
+<body>
+
+    <h1>Liste des membres</h1>
+    <a href="/ajouter">Ajouter un membre</a>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Email</th>
+            <th>tel</th>
+            <th>Action</th>
+        </tr>
+
+        {% for membre in membres %}
+        <tr>
+            <td>{{ membre["id"] }}</td>
+            <td>{{ membre["nom"] }}</td>
+            <td>{{ membre["prenom"] }}</td>
+            <td>{{ membre["email"] }}</td>
+            <td>{{ membre["tel"] }}</td>
+            <td>
+                <a href="/supprimer/{{ membre['id'] }}">Supprimer</a>
+                <a href="/modifier/{{ membre['id'] }}">Modifier</a>
+            </td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+</body>
+</html>
+</body>
+</html>

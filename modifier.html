@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>modifier un membre</title>
+</head>
+<body>
+  <h1>Modifier un membre</h1>
+
+    <form method="POST">
+        <label>Nom :</label><br>
+        <input type="text" name="nom" value="{{ membre['nom'] }}"><br><br>
+
+        <label>Prénom :</label><br>
+        <input type="text" name="prenom" value="{{ membre['prenom'] }}"><br><br>
+
+        <label>Email :</label><br>
+        <input type="text" name="email" value="{{ membre['email'] }}"><br><br>
+        <label>Tel :</label><br>
+        <input type="text" name="tel" value="{{ membre['tel'] }}"><br><br>
+
+        <button type="submit">Modifier</button>
+    </form>
+</body>
+</html>
